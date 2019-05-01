@@ -1,5 +1,6 @@
 package com.example.android.shoppingpool;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.net.Uri;
 import android.support.v7.app.AlertDialog;
@@ -50,6 +51,7 @@ public class arActivity extends AppCompatActivity {
     }
 
 
+    @SuppressLint("NewApi")
     private void onUpdate() {
         boolean trackingChanged = updateTracking();
         View contentView = findViewById(android.R.id.content);
@@ -122,7 +124,7 @@ public class arActivity extends AppCompatActivity {
     }
 
     private void placeObject(ArFragment fragment, Anchor anchor, Uri model) {
-        CompletableFuture<Void> renderableFuture =
+        @SuppressLint({"NewApi", "LocalSuppress"}) CompletableFuture<Void> renderableFuture =
                 ModelRenderable.builder()
                         .setSource(fragment.getContext(), model)
                         .build()
