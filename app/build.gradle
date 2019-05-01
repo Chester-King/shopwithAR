@@ -30,6 +30,11 @@ android {
         }
     }
 
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
 }
 
 
@@ -78,7 +83,7 @@ dependencies {
     implementation 'com.github.mancj:MaterialSearchBar:0.3.1'
 
     implementation 'org.jbundle.util.osgi.wrapped:org.jbundle.util.osgi.wrapped.org.apache.http.client:4.1.2'
-
+    implementation "com.google.ar.sceneform.ux:sceneform-ux:1.8.0"
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
@@ -88,3 +93,50 @@ dependencies {
 apply plugin: 'com.google.gms.google-services'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'com.google.ar.sceneform.plugin'
+
+
+sceneform.asset('sampledata/models/andy.obj',
+        'default',
+        'sampledata/models/andy.sfa',
+        'src/main/assets/andy')
+
+sceneform.asset('sampledata/models/Bed_01.obj',
+        'default',
+        'sampledata/models/Bed_01.sfa',
+        'src/main/assets/Bed_01')
+
+sceneform.asset('sampledata/models/Cabin.obj',
+        'default',
+        'sampledata/models/Cabin.sfa',
+        'src/main/assets/Cabin')
+
+sceneform.asset('sampledata/models/Computer.obj',
+        'default',
+        'sampledata/models/Computer.sfa',
+        'src/main/assets/Computer')
+
+sceneform.asset('sampledata/models/Couch.obj',
+        'default',
+        'sampledata/models/Couch.sfa',
+        'src/main/assets/Couch')
+
+sceneform.asset('sampledata/models/House.obj',
+        'default',
+        'sampledata/models/House.sfa',
+        'src/main/assets/House')
+
+sceneform.asset('sampledata/models/Laptop.obj',
+        'default',
+        'sampledata/models/Laptop.sfa',
+        'src/main/assets/Laptop')
+
+sceneform.asset('sampledata/models/model.obj',
+        'default',
+        'sampledata/models/model.sfa',
+        'src/main/assets/model')
+
+sceneform.asset('sampledata/models/TV_01.obj',
+        'default',
+        'sampledata/models/TV_01.sfa',
+        'src/main/assets/TV_01')

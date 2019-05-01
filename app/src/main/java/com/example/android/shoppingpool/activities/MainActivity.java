@@ -27,6 +27,7 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -40,6 +41,7 @@ import com.example.android.shoppingpool.fragments.SoftFragment;
 import com.example.android.shoppingpool.fragments.store;
 import com.example.android.shoppingpool.models.AppUser;
 import com.example.android.shoppingpool.services.LocationTrackerService;
+import com.example.android.shoppingpool.timageActivity;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -81,6 +83,17 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         startService(new Intent(getApplicationContext(), LocationTrackerService.class));
+
+        Button imA=(Button) findViewById(R.id.image_target);
+
+        imA.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(view.getContext(),"Send to Picture Activity",Toast.LENGTH_SHORT).show();
+                Intent i=new Intent(MainActivity.this, timageActivity.class);
+                startActivity(i);
+            }
+        });
 
         mToolbar = (Toolbar) findViewById(R.id.main_page_toolbar);
         setSupportActionBar(mToolbar);

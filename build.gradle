@@ -22,6 +22,8 @@ buildscript {
         classpath 'io.fabric.tools:gradle:1.25.3'
         classpath 'com.google.firebase:firebase-plugins:1.1.5'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath 'com.google.ar.sceneform:plugin:1.8.0'
+
     }
 }
 apply plugin: 'kotlin'
