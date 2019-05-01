@@ -17,6 +17,10 @@
         android:name="android.permission.WRITE_SETTINGS"
         tools:ignore="ProtectedPermissions" />
 
+    <uses-feature
+        android:name="android.hardware.camera.ar"
+        android:required="true" />
+
     <application
         android:name=".application.AppController"
         android:allowBackup="true"
@@ -69,6 +73,9 @@
         <meta-data
             android:name="io.fabric.ApiKey"
             android:value="78c597d760f356229aa1d1c4839f1771faa6ae99" />
+        <meta-data
+            android:name="com.google.ar.core"
+            android:value="required" />
 
         <activity android:name=".activities.ClickPostActivity" />
         <activity android:name=".activities.CommentsActivity" />
