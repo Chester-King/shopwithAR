@@ -6,6 +6,7 @@ import android.net.Uri;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -161,6 +162,8 @@ public class arActivity extends AppCompatActivity {
             bed.setImageResource(R.drawable.droid_thumb);
             bed.setContentDescription("Bed_01");
             bed.setOnClickListener(view -> {
+                Toast.makeText(this,"Deploy model",Toast.LENGTH_SHORT);
+                Log.v("CHeckFire","Deploy Deploy");
                 addObject(Uri.parse("Bed_01.sfb"));
             });
             gallery.addView(bed);
